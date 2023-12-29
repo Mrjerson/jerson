@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
@@ -21,10 +21,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 const connection = mysql.createConnection({
-  host: 'sql212.infinityfree.com',
-  user: 'if0_35671649',
-  password: 'KzRjbWW5V9',
-  database: 'if0_35671649_secret_data',
+  host: 'mysql-35152716-dk061106-6049.a.aivencloud.com',
+  user: 'avnadmin',
+  password: 'AVNS_rj92Xf7842HUHplRN7a',
+  port: '21068',
+  database: 'secret_data',
 });
 
 connection.connect((err) => {
